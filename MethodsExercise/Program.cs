@@ -6,9 +6,17 @@ namespace MethodsExercise
     {
         static void Main(string[] args)
         {
-            
-            /// Project one (Madlibs Story)------------------------------------------------
 
+            //Madlib Excercise
+            StoryGenerator();
+
+
+            // Calling Calculator method: this method requires one string and int params. the string must be one of the follow ( "+"  "-"   "/"   "*")
+            Console.WriteLine(Calculate("-", 5, 5, 3, 1));
+        }
+
+        public static void StoryGenerator() 
+        {
 
             Console.WriteLine("Enter a name: ");
             string name = Console.ReadLine();
@@ -19,7 +27,7 @@ namespace MethodsExercise
             string color = Console.ReadLine();
             Console.Clear();
 
-            Console.WriteLine("Enter your facorite animal: ");
+            Console.WriteLine("Enter your favorite animal: ");
             string animal = Console.ReadLine();
             Console.Clear();
 
@@ -27,23 +35,12 @@ namespace MethodsExercise
             string band = Console.ReadLine();
             Console.Clear();
 
-            Console.WriteLine(StoryGenerator(name, color, animal, band));
-       
+            
 
-
-            // end ------------------------------------------------------------------
-
-
-            // Calling Calculator method: this method requires one string and int params. the string must be one of the follow ( "+"  "-"   "/"   "*")
-            Console.WriteLine(Calculate("-", 5, 5, 3, 1));
-        }
-
-        public static string StoryGenerator(string name, string color, string animal, string band) 
-        {
             string story = $"Once upon a time there was ninja named {name}. {name} did not like wearing black so they picked out a {color} colored outfit. " +
                 $"\n{name} was excited to dress up to see their favorite band {band}. {name} walked to the ticket counter and the operator was a {animal}.";
 
-            return story;
+            Console.WriteLine(story);
         }
 
 
